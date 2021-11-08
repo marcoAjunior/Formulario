@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <form method="post" id="fContato" action="mailto:marcoaurelio14rj@gmail.com">
+         <fieldset id="usuario">
+            <legend>Identificação do Usuário</legend>
+            <p><label for="cNome">Nome:</label> <input type="text" name="Tnome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo" ></p>
+            <p>senha: <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+            <p>E-mail: <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" ></p>
+            <fieldiset id="sexo"><legend>Sexo:</legend>
+                <input type="radio" name="tSexo" id="cMasculino" checked><label for="cMasculino">Masculino</label><br>
+                <input type="radio" name="tSexo" id="cFeminino"><label for="cFeminino">Feminino</label>
+                <p>Data de nascimento: <input type="date" name="tData" id="cData"></p>
+            </fieldiset>
+        </fieldset>
+        <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+            <p><label for="cEst">Estado:</label></p>
+            <select name="tEst" id="cEst">
+                
+        <option value="0">Selecione o Estado</option>
+                <option value="DF">Distrito Federal</option>
+   <optgroup label="Norte">
+                <option value="AM">Amazonas</option>
+                <option value="RR">Roraima</option>
+                <option value="AP">Amapá</option>
+                <option value="PA">Pará</option>
+                <option value="TO">Tocantins</option>
+                <option value="RO">Rondônia</option>
+                <option value="AC">Acre</option>
+   </optgroup>
+   <optgroup label="Nordeste">
+                <option value="MA">Maranhão</option>
+                <option value="PI">Piauí</option>
+                <option value="CE">Ceará</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PB">Paraíba</option>
+                <option value="SE">Sergipe</option>
+                <option value="AL">Alagoas</option>
+                <option value="BA">Bahia</option>
+   </optgroup>
+   <optgroup label="Centro-Oeste">
+                <option value="GO">Goiás</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+   </optgroup>
+   <optgroup label="Sudeste">
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="ES">Espirito Santo</option>
+   </optgroup>
+   <optgroup label="Sul">
+                <option value="PR">Paraná</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="SC">Santa Catarina</option>
+   </optgroup>
+
+   <p><label for="cCid">Cidade:</label></p>
+            <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades">
+            <datalist id="cidades">
+            </datalist>
+            <p>Logradouro: <input type="text" name="tBairro" id="cBairro" size="30" maxlength="80" placeholder="Rua, Av, Trav..."></p>  
+            <p>Número: <input type="number" name="tNumero" id="cNumero" min="0" max="99999" ></p>  
+        </fieldset>                
+        <fieldset id="mensagem">
+            <legend>Mensagem do Usuário</legend>
+                <p><label for="cUrg">Grau de Urgência:</label>
+                Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
+                <p><label for="cMsg">Mensagem:</label>
+                <textarea name="tMsg" id="cMsg" cols="30" rows="10" placeholder="Deixe aqui sua mensagem" ></textarea>
+        </fieldset>
+        <input type="image" name="tEnviar" src="botao-enviar.png"/>
+    </form>
+    
+</body>
+</html>
